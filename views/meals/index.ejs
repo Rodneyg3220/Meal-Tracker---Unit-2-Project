@@ -1,0 +1,25 @@
+
+    <%- include('../partials/header',{title}) %>
+
+<table id="list">
+  <thead>
+    <tr>
+      <th>Meal Name</th>
+      <th>Ingredients</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% meals.forEach(function(m) { %>
+      <tr>
+        <td><%= m.meal %></td>
+        <td><%= m.ingredients %></td>
+        <td><%= m.calories %></td>
+        <td><%= m.protien %></td>
+        <td><%= m.sugar %></td>
+        <td><a href="/meals/<%= m._id %>">DETAILS</a></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  

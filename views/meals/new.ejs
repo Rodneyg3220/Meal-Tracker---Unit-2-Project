@@ -1,0 +1,38 @@
+
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/meals" method="POST">
+<label>Meal Name:</label>
+<input name="meal">
+<br>
+<br>
+<label>Ingredients:</label>
+<input name="ingredients">
+
+  <br>
+  <label>Do you have ingredients?:</label>
+  <input type="checkbox" name="haveIngredients" checked>
+  <br>
+  <br>
+  <label>Calorie Count:</label>
+  <input name="calories" type="number" min="0">
+  <br>
+  <br>
+  <label>Grams of Protien:</label>
+  <input name="protien" type="number" min="0">
+  <br>
+  <br>
+  <label>Grams of Sugar:</label>
+  <input name="sugar" type="number" min="0">
+  <br>
+  <br>
+  <label>Date of meal:</label>
+    <input type="date" name="mealDay">
+    <label>:</label>
+  <input type="submit" value="Add Meal">
+
+</form>
+
+</html>
+
+<%- include('../partials/footer') %>

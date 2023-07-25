@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meal Tracker</title>
+
+    <%- include('../partials/header') %>
+
+<section id="show-page">
+  <div>Meal Name: </div>
+  <div><%= meals.meal %></div>
+  <div>Ingredients: </div>
+  <div><%= meals.ingredients %></div>
+  <div>Total Calories </div>
+  <div><%= meals.calories %></div>
+  <div>Protein Count: </div>
+  <div><%= meals.protien %></div>
+  <div>Sugar Total: </div>
+  <div><%= meals.sugar %></div>
+ 
+  <form id="add-meals-form" method="POST"
+  action="/meals/<%= meals._id %>/nutrition">
+  <br>
+</form>
+</section>
+<!-- new markup below -->
+<br>
+
+   
+  
+  
+
+
+
+</html>
