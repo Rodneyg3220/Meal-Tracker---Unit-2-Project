@@ -2,7 +2,7 @@
 <%- include('../partials/header') %>
 
 <form id="new-form" action="/meals" method="POST">
-<label>Meal Name:</label>
+<label>Meal Name:
 <input name="meal">
 <br>
 <br>
@@ -22,16 +22,19 @@
   <input name="protien" type="number" min="0">
   <br>
   <br>
-  <label>Grams of Sugar:</label>
+  <label>Grams of Sugar:</label> 
   <input name="sugar" type="number" min="0">
   <br>
   <br>
-  <label>Date of meal:</label>
+  <label>Date of meal:
+    <br>
     <input type="date" name="mealDay">
-    <label>:</label>
+    <br>
+    <br>
   <input type="submit" value="Add Meal">
 
 </form>
+
 
 </html>
 

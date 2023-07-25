@@ -23,17 +23,17 @@ function newNutrition(req, res) {
   })
 }
 
-function addNutrition(req, res, next) {
-    Meals.findById(req.params.id, function(err, meals) {
-      meals.nutrition.push(req.body);
-      meals.save(function(err, meals) {
-          res.redirect(`/meals/${meals._id}`);
-      });
-    }),
+// function addNutrition(req, res, next) {
+//     Meals.findById(req.params.id, function(err, meals) {
+//       meals.nutrition.push(req.body);
+//       meals.save(function(err, meals) {
+//           res.redirect(`/meals/${meals._id}`);
+//       });
+//     }),
+
 
 module.exports = {
     create, 
     new: newNutrition,
-    addNutrition
+    // addNutrition
 }
-};

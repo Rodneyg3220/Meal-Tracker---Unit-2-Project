@@ -21,7 +21,7 @@ async function show(req, res) {
 }
 
 function newMeals(req, res) {
-  res.render('meals/new', { title: 'Meals Created', errorMsg: '' });
+  res.render('meals/new', { title: 'Create Your Meal!', errorMsg: '' });
 }
 
 async function create(req, res) {
@@ -38,11 +38,11 @@ async function create(req, res) {
   }
 }
 
-// function addNutrition(req, res, next) {
-//     Meals.findById(req.params.id, function(err, meals) {
-//       meals.destinations.push(req.body);
-//       meals.save(function(err, meals) {
-//           res.redirect(`/meals/${meals._id}`);
-//       });
-//     });
+    // async function addNutrition(req, res, next) {
+    // Meals.findById(req.params.id, function(err, meals) {
+    //   meals.destinations.push(req.body);
+    //   meals.save(function(err, meals) {
+    //       res.redirect(`/meals/${meals._id}`);
+    //   });
+    // });
 // }
