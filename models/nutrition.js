@@ -12,9 +12,9 @@ const nutritionSchema = new Schema({
     sugar: {
         type: Number
     },
-    mealDay: {
-        type: Date
-    }
+    mealDay: Date
+    }, {
+        timestamps: true
 });
 
 module.exports = mongoose.model("Nutrition", nutritionSchema)

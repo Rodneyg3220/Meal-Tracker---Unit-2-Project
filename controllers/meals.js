@@ -1,14 +1,24 @@
+const meals = require('../models/meals');
 const Meals = require('../models/meals');
 // const { router } = require('../server');
 const Nutrition = require('../models/nutrition');
+const nutrition = require('./nutrition');
 
 module.exports = {
   index,
   show,
   newMeals,
   create,
-//   addNutrition
+  addNutrition,
+  delete: deleteMeals
 };
+
+async function deleteMeals(req, res){
+    const meals = await Meals.findById(req.params.id)
+    await Nutrition.findByIdAndDelete(meals.nutrition)
+    await Meals.findByIdAndDelete(meals._id)
+    res.redirect("/meals")
+}
 
 async function index(req, res) {
   const meals = await Meals.find({});
@@ -16,8 +26,8 @@ async function index(req, res) {
 }
 
 async function show(req, res) {
-  const meals = await Meals.findById(req.params.id);
-  res.render('meals/show', { title: 'Meals Detail', meals, nutrition: await Nutrition.find ({meals: meals._id})});
+  const meals = await Meals.findById(req.params.id).populate("nutrition");
+  res.render('meals/show', { title: 'Meals Detail', meals,});
 }
 
 function newMeals(req, res) {
@@ -27,6 +37,8 @@ function newMeals(req, res) {
 async function create(req, res) {
   req.body.haveIngredients = !!req.body.haveIngredients;
   try {
+  const nutrition = await Nutrition.create(req.body)
+  req.body.nutrition = nutrition._id
    console.log(req.body)
    await Meals.create(req.body);
 
@@ -38,11 +50,13 @@ async function create(req, res) {
   }
 }
 
-    // async function addNutrition(req, res, next) {
-    // Meals.findById(req.params.id, function(err, meals) {
-    //   meals.destinations.push(req.body);
-    //   meals.save(function(err, meals) {
-    //       res.redirect(`/meals/${meals._id}`);
-    //   });
-    // });
-// }
+
+
+    async function addNutrition(req, res, next) {
+    Meals.findById(req.params.id, function(err, meals) {
+      meals.destinations.push(req.body);
+      meals.save(function(err, meals) {
+          res.redirect(`/meals/${meals._id}`);
+      });
+    });
+}

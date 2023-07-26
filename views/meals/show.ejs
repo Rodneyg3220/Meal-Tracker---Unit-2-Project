@@ -13,19 +13,23 @@
   <div><%= meals.meal %></div>
   <div>Ingredients: </div>
   <div><%= meals.ingredients %></div>
-  <div>Total Calories </div>
-  <div><%= meals.calories %></div>
+  <div>Total Calories: </div>
+  <div><%= meals.nutrition.calories %></div>
   <div>Protien Count: </div>
-  <div><%= meals.protien %></div>
+  <div><%= meals.nutrition.protien %></div>
   <div>Sugar Total: </div>
-  <div><%= meals.sugar %></div>
+  <div><%= meals.nutrition.sugar %></div>
  
   <form id="add-meals-form" method="POST"
   action="/meals/<%= meals._id %>/nutrition">
   <br>
 </form>
+<form id="delete-meal" method="POST"
+action="/meals/<%=meals._id %>?_method=DELETE" >
+  <button type="submit">X</button>
+</form>
 </section>
-<!-- new markup below -->
+
 <br>
 
    

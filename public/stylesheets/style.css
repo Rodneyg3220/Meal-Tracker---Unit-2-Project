@@ -37,6 +37,7 @@ body > main {
   background-color: lightblue;
   padding: 20px;
   overflow-y: scroll;
+  /* background-image: url("https://media.istockphoto.com/id/1134717299/photo/healthy-food-concept-with-fresh-vegetables-and-ingredients-for-cooking.jpg?s=612x612&w=0&k=20&c=NSHA_YEVMg4JTYGCVV0AkYjBuCR4lohIOUAUoXWLww4="); */
 }
 
 body > main h1:first-child {

@@ -11,4 +11,6 @@ router.get('/:id', mealsCtrl.show);
 
 router.post('/', mealsCtrl.create);
 
+router.delete("/:id", mealsCtrl.delete);
+
 module.exports = router;

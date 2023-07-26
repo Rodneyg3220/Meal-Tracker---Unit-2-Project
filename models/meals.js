@@ -11,14 +11,15 @@ const foodSchema = new Schema ({
     ingredients: {
         type: String
     },
-
-    mealDay: {
-        type: Date
-    }, 
+    
     nutrition: {
         type: mongoose.Types.ObjectId,
         ref: "Nutrition",
-    } 
+    }, 
+    
+    mealDay: Date
+}, {
+  timestamps: true
 });
 
 
