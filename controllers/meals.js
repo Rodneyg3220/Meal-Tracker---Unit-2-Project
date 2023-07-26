@@ -50,6 +50,25 @@ async function create(req, res) {
   }
 }
 
+async function create(req, res) {
+    const meals = await Meals.findById(req.params.id);
+  
+    // Add the user-centric info to req.body (the new review)
+    req.body.user = req.user._id;
+    req.body.userName = req.user.name;
+    req.body.userAvatar = req.user.avatar;
+  
+    // We can push (or unshift) subdocs into Mongoose arrays
+    meals.meals.push(req.body);
+    try {
+      // Save any changes made to the movie doc
+      await meals.save();
+    } catch (err) {
+      console.log(err);
+    }
+    res.redirect(`/meals/${meals._id}`);
+  }
+
 
 
     async function addNutrition(req, res, next) {

@@ -16,6 +16,18 @@ const foodSchema = new Schema ({
         type: mongoose.Types.ObjectId,
         ref: "Nutrition",
     }, 
+
+    // Don't forget to add the comma above then
+  // add the 3 new properties below
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
+  userName: String,
+  userAvatar: String
+}, {
+  timestamps: true,
     
     mealDay: Date
 }, {
