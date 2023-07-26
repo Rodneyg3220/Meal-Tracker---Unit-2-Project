@@ -1,15 +1,15 @@
-const meals = require('../models/meals');
+// const meals = require('../models/meals');
 const Meals = require('../models/meals');
 // const { router } = require('../server');
 const Nutrition = require('../models/nutrition');
-const nutrition = require('./nutrition');
+// const nutrition = require('./nutrition');
 
 module.exports = {
   index,
   show,
   newMeals,
   create,
-  addNutrition,
+//   addNutrition,
   delete: deleteMeals
 };
 
@@ -59,15 +59,15 @@ async function create(req, res) {
     req.body.userAvatar = req.user.avatar;
   
     // We can push (or unshift) subdocs into Mongoose arrays
-    meals.meals.push(req.body);
-    try {
-      // Save any changes made to the movie doc
-      await meals.save();
-    } catch (err) {
-      console.log(err);
-    }
-    res.redirect(`/meals/${meals._id}`);
-  }
+//     meals.push(req.body);
+//     try {
+//       // Save any changes made to the movie doc
+//       await meals.save();
+//     } catch (err) {
+//       console.log(err);
+//     }
+//     res.redirect(`/meals/${meals._id}`);
+//   }
 
 
 
@@ -78,4 +78,5 @@ async function create(req, res) {
           res.redirect(`/meals/${meals._id}`);
       });
     });
+    }
 }
