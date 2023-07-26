@@ -59,15 +59,15 @@ async function create(req, res) {
     req.body.userAvatar = req.user.avatar;
   
     // We can push (or unshift) subdocs into Mongoose arrays
-//     meals.push(req.body);
-//     try {
-//       // Save any changes made to the movie doc
-//       await meals.save();
-//     } catch (err) {
-//       console.log(err);
-//     }
-//     res.redirect(`/meals/${meals._id}`);
-//   }
+    Meals.create(req.body);
+    try {
+      // Save any changes made to the movie doc
+      await meals.save();
+    } catch (err) {
+      console.log(err);
+    }
+    res.redirect(`/meals`);
+  }
 
 
 
@@ -79,4 +79,3 @@ async function create(req, res) {
       });
     });
     }
-}

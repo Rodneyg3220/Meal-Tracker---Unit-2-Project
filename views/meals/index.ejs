@@ -11,6 +11,7 @@
   <tbody>
     <% meals.forEach(function(m) { %>
       <tr>
+        <td class="meals-user"><img alt="avatar" src="<%= m.userAvatar %>" referrerpolicy="no-referrer" ><%= m.userName %></td>
         <td><%= m.meal %></td>
         <td><%= m.ingredients %></td>
         <td><%= m.calories %></td>
