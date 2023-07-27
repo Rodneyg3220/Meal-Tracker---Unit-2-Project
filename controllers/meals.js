@@ -1,23 +1,20 @@
-// const meals = require('../models/meals');
 const Meals = require('../models/meals');
-// const { router } = require('../server');
 const Nutrition = require('../models/nutrition');
-// const nutrition = require('./nutrition');
 
 module.exports = {
   index,
   show,
   newMeals,
   create,
-  addNutrition,
-  delete: deleteMeals
+  delete: deleteMeals,
+//   updateMany
 };
 
-async function deleteMeals(req, res){
-    const meals = await Meals.findById(req.params.id)
-    await Nutrition.findByIdAndDelete(meals.nutrition)
-    await Meals.findByIdAndDelete(meals._id)
-    res.redirect("/meals")
+async function deleteMeals(req, res) {
+  const meals = await Meals.findById(req.params.id);
+  await Nutrition.findByIdAndDelete(meals.nutrition);
+  await Meals.findByIdAndDelete(meals._id);
+  res.redirect('/meals');
 }
 
 async function index(req, res) {
@@ -26,8 +23,8 @@ async function index(req, res) {
 }
 
 async function show(req, res) {
-  const meals = await Meals.findById(req.params.id).populate("nutrition");
-  res.render('meals/show', { title: 'Meals Detail', meals,});
+  const meals = await Meals.findById(req.params.id).populate('nutrition');
+  res.render('meals/show', { title: 'Meals Detail', meals });
 }
 
 function newMeals(req, res) {
@@ -36,46 +33,36 @@ function newMeals(req, res) {
 
 async function create(req, res) {
   req.body.haveIngredients = !!req.body.haveIngredients;
+
   try {
-  const nutrition = await Nutrition.create(req.body)
-  req.body.nutrition = nutrition._id
-   console.log(req.body)
-   await Meals.create(req.body);
+    const nutrition = await Nutrition.create(req.body);
 
-    res.redirect('/meals');  
+    // Add the nutrition to the meal
+    req.body.nutrition = nutrition._id;
 
+    // Add user-centric info to req.body (the new meal)
+    req.body.user = req.user._id;
+    req.body.userName = req.user.name;
+    req.body.userAvatar = req.user.avatar;
+
+    // Create the new meal
+    await Meals.create(req.body);
+
+    res.redirect('/meals');
   } catch (err) {
     console.log(err);
     res.render('meals/new', { errorMsg: err.message });
   }
 }
 
-async function create(req, res) {
-    const meals = await Meals.findById(req.params.id);
+// async function updateMany(req, res) {
+   
   
-    // Add the user-centric info to req.body (the new review)
-    req.body.user = req.user._id;
-    req.body.userName = req.user.name;
-    req.body.userAvatar = req.user.avatar;
-  
-    // We can push (or unshift) subdocs into Mongoose arrays
-    Meals.create(req.body);
-    try {
-      // Save any changes made to the meals doc
-      await meals.save();
-    } catch (err) {
-      console.log(err);
-    }
-    res.redirect(`/meals`);
-  }
-
-
-
-    async function addNutrition(req, res, next) {
-    Meals.findById(req.params.id, function(err, meals) {
-      meals.destinations.push(req.body);
-      meals.save(function(err, meals) {
-          res.redirect(`/meals/${meals._id}`);
-      });
-    });
-    }
+//     try {
+//       await Meals.updateMany(filter, update);
+//       res.redirect('/meals');
+//     } catch (err) {
+//       console.log(err);
+//       res.render('error-page', { errorMsg: err.message });
+//     }
+//   }

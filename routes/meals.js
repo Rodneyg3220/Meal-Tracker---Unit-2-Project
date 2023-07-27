@@ -13,4 +13,6 @@ router.post('/', mealsCtrl.create);
 
 router.delete("/:id", mealsCtrl.delete);
 
+// router.updateMany("/:id", mealsCtrl.updateMany);
+
 module.exports = router;

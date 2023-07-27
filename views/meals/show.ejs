@@ -14,11 +14,16 @@
   <div>Ingredients: </div>
   <div><%= meals.ingredients %></div>
   <div>Total Calories: </div>
-<div><%= nutrition.calories %></div>
-  <div>Protien Count: </div>
-  <div><%= meals.nutrition ? meals.nutrition.protien : "N/A" %></div>
+  <div><%= meals.nutrition ? meals.nutrition.calories : 'N/A' %></div>
+  <div>Protein Count: </div>
+  <div><%= meals.nutrition ? meals.nutrition.protien : 'N/A' %></div>
   <div>Sugar Total: </div>
-  <div><%= meals.nutrition ? meals.nutrition.sugar : "N/A" %></div>
+  <div><%= meals.nutrition ? meals.nutrition.sugar : 'N/A' %></div>
+  <label>Day of Meal:</label>
+    <input type="date" name="mealDay">
+    </label>
+
+</section>
  
   <form id="add-meals-form" method="POST"
   action="/meals/<%= meals._id %>/nutrition">
@@ -26,15 +31,9 @@
 </form>
 <form id="delete-meal" method="POST"
 action="/meals/<%=meals._id %>?_method=DELETE" >
-  <button type="submit">X</button>
+  <button type="submit">Delete Meal</button>
 </form>
 </section>
 
 <br>
-
-   
-  
-
-
-
 </html>
