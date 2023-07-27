@@ -14,11 +14,11 @@
   <div>Ingredients: </div>
   <div><%= meals.ingredients %></div>
   <div>Total Calories: </div>
-  <div><%= meals.nutrition.calories %></div>
+<div><%= nutrition.calories %></div>
   <div>Protien Count: </div>
-  <div><%= meals.nutrition.protien %></div>
+  <div><%= meals.nutrition ? meals.nutrition.protien : "N/A" %></div>
   <div>Sugar Total: </div>
-  <div><%= meals.nutrition.sugar %></div>
+  <div><%= meals.nutrition ? meals.nutrition.sugar : "N/A" %></div>
  
   <form id="add-meals-form" method="POST"
   action="/meals/<%= meals._id %>/nutrition">

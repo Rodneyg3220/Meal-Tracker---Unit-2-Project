@@ -9,7 +9,7 @@ module.exports = {
   show,
   newMeals,
   create,
-//   addNutrition,
+  addNutrition,
   delete: deleteMeals
 };
 
@@ -61,7 +61,7 @@ async function create(req, res) {
     // We can push (or unshift) subdocs into Mongoose arrays
     Meals.create(req.body);
     try {
-      // Save any changes made to the movie doc
+      // Save any changes made to the meals doc
       await meals.save();
     } catch (err) {
       console.log(err);
