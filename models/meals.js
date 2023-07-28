@@ -17,6 +17,8 @@ const foodSchema = new Schema ({
         ref: "Nutrition",
     }, 
 
+    haveIngredients: { type: Boolean, default: false },
+
     // Don't forget to add the comma above then
   // add the 3 new properties below
   user: {
@@ -29,7 +31,6 @@ const foodSchema = new Schema ({
 }, {
   timestamps: true,
     
-    mealDay: Date
 }, {
   timestamps: true
 });

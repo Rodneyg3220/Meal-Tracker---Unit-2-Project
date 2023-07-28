@@ -13,15 +13,17 @@
   <div><%= meals.meal %></div>
   <div>Ingredients: </div>
   <div><%= meals.ingredients %></div>
+  <div>Do you have ingredients? </div>
+  <div><%= meals.haveIngredients %></div>
   <div>Total Calories: </div>
   <div><%= meals.nutrition ? meals.nutrition.calories : 'N/A' %></div>
   <div>Protein Count: </div>
   <div><%= meals.nutrition ? meals.nutrition.protien : 'N/A' %></div>
   <div>Sugar Total: </div>
   <div><%= meals.nutrition ? meals.nutrition.sugar : 'N/A' %></div>
-  <label>Day of Meal:</label>
-    <input type="date" name="mealDay">
-    </label>
+  <div>Day of Meal:<div>
+  <div><%= meals.nutrition ? meals.nutrition.mealDay : 'N/A' %></div>
+  
 
 </section>
  

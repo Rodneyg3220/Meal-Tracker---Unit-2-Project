@@ -12,7 +12,7 @@ const nutritionSchema = new Schema({
     sugar: {
         type: Number
     },
-    // mealDay: Date
+    mealDay: Date
     }, {
         timestamps: true
 });
