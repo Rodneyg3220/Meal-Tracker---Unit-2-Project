@@ -1,8 +1,6 @@
 const Meals = require('../models/meals');
 const Nutrition = require(`../models/nutrition`);
 
-
-
 async function create(req,res) {
   req.body.meals = req.params.id
   try {
@@ -22,7 +20,6 @@ function newNutrition(req, res) {
     meals: req.params.id
   })
 }
-
 
 module.exports = {
     create, 

@@ -1,5 +1,11 @@
 # Meal Tracker App
 
+https://git.heroku.com/shielded-basin-42458.git
+
+# Trello Board
+
+ https://trello.com/invite/b/QtXF2rqY/ATTIe9d1d9e1a5ea69c4c549d08e4f1024737D783F6C/unit-2-project
+
 ### Meal Tracker
 ``` The Meal Tracker App was created for holding an individual person or group of people accounctable on what to eat each week to reach whatever goal you have set for yourself.```
 
@@ -16,7 +22,7 @@
 -As a user, I would like to input the ingredients need for each meal, because I would keep track of what is needed specifically to make the meal.
 -As a user, I would like to check a box once I have the ingrients needed for the meal, because I would like a reminder of the ingredients needed for my meal.
 -As a user, I want to select specific dates for each meal, because I want designate each meal for a specific day.
--As a user, I want to see the details of my meals for that on another page, because I would like to see a rundown of all details for the meals
+-As a user, I want to see the details of my meals for that on another page, because I would like to see a rundown of all details for the meals.
 ```
 ### Next Steps/In the future I would like to:
 ``` 

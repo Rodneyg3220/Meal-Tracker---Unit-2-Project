@@ -4,13 +4,11 @@ const router = express.Router();
 const mealsCtrl = require('../controllers/meals');
 const ensureLoggedIn = require('../config/ensureLoggedIn');
 
-// This router is mounted to a "starts with" path of '/'
-
-// GET /performers/new (new functionality)
+// GET /user/new (new functionality)
 router.get('/meals/new', ensureLoggedIn, mealsCtrl.new);
-// POST /performers (create functionality)
+// POST /user (create functionality)
 router.post('/meals', ensureLoggedIn, mealsCtrl.create);
-// POST /movies/:id/performers (associate a performer with a meal)
+// POST /meals/:id/user (associate a user with a meal)
 router.post('/meals/:id/meals', ensureLoggedIn, mealsCtrl);
 
 /* GET users listing. */

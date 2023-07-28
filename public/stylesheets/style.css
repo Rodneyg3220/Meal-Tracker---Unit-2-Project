@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: fantasy;
-  color: green;
+  color: black;
   font-weight: bold;
 }
 
@@ -54,7 +54,7 @@ nav > a {
 
 nav > a:hover:not(.active) {
   color: white;
-  background-color: #424748;
+  background-color: green;
 }
 
 nav > a.active {
@@ -68,10 +68,11 @@ nav > a.active {
   grid-template-columns: repeat(2, minmax(auto, 22rem));
 }
 
-#new-form *, #add-review-form *  {
-  font-size: 20px;
+#new-form *, #add-meals-form *  {
+  font-size: 30px;
   padding: 5px;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 #new-form input[type="submit"] {
@@ -114,6 +115,8 @@ table td {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 1rem;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 #show-page div:nth-child(even) {

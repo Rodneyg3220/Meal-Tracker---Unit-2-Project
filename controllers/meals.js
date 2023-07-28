@@ -7,7 +7,6 @@ module.exports = {
   newMeals,
   create,
   delete: deleteMeals,
-//   updateMany
 };
 
 async function deleteMeals(req, res) {
@@ -36,11 +35,7 @@ async function create(req, res) {
 
   try {
     const nutrition = await Nutrition.create(req.body);
-
-    // Add the nutrition to the meal
     req.body.nutrition = nutrition._id;
-
-    // Add user-centric info to req.body (the new meal)
     req.body.user = req.user._id;
     req.body.userName = req.user.name;
     req.body.userAvatar = req.user.avatar;
@@ -54,15 +49,3 @@ async function create(req, res) {
     res.render('meals/new', { errorMsg: err.message });
   }
 }
-
-// async function updateMany(req, res) {
-   
-  
-//     try {
-//       await Meals.updateMany(filter, update);
-//       res.redirect('/meals');
-//     } catch (err) {
-//       console.log(err);
-//       res.render('error-page', { errorMsg: err.message });
-//     }
-//   }

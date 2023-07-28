@@ -23,19 +23,16 @@
   <div><%= meals.nutrition ? meals.nutrition.sugar : 'N/A' %></div>
   <div>Day of Meal:<div>
   <div><%= meals.nutrition ? meals.nutrition.mealDay : 'N/A' %></div>
-  
-
-</section>
+  </section>
  
   <form id="add-meals-form" method="POST"
   action="/meals/<%= meals._id %>/nutrition">
   <br>
-</form>
-<form id="delete-meal" method="POST"
-action="/meals/<%=meals._id %>?_method=DELETE" >
+  </form>
+  <form id="delete-meal" method="POST"
+   action="/meals/<%=meals._id %>?_method=DELETE" >
   <button type="submit">Delete Meal</button>
-</form>
-</section>
-
-<br>
-</html>
+  </form>
+  </section>
+  <br>
+  </html>
