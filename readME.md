@@ -7,16 +7,13 @@ https://git.heroku.com/shielded-basin-42458.git
  https://trello.com/invite/b/QtXF2rqY/ATTIe9d1d9e1a5ea69c4c549d08e4f1024737D783F6C/unit-2-project
 
 ### Meal Tracker
-``` The Meal Tracker App was created for holding an individual person or group of people accounctable on what to eat each week to reach whatever goal you have set for yourself. Some examples would be: to help save money and start cooking at home, a dietary lifestyle change, or just to learn how to cook.
-```
+``` The Meal Tracker App was created for holding an individual person or group of people accounctable on what to eat each week to reach whatever goal you have set for yourself. Some examples would be: to help save money and start cooking at home, a dietary lifestyle change, or just to learn how to cook.```
 
 ### How To Use
-``` The Meal Tracker is used by simply logging in with your gmail account first. Then, you will select the add meals button and enter the name of your meal, the ingredients needed, total calories for the meal, total grams of protein, total grams of sugar, as well as add the date for when you choose to enjoy that specific meal. After a meal is added you are directed to an "All Meals" page that will show your meals and you will click the details button shown to review the specifics of your meal as well as delete the meal once you have enjoyed it.
-```
+``` The Meal Tracker is used by simply logging in with your gmail account first. Then, you will select the add meals button and enter the name of your meal, the ingredients needed, total calories for the meal, total grams of protein, total grams of sugar, as well as add the date for when you choose to enjoy that specific meal. After a meal is added you are directed to an "All Meals" page that will show your meals and you will click the details button shown to review the specifics of your meal as well as delete the meal once you have enjoyed it.```
 
 ### Technologies Used
-``` Node.JS, Express JS, MongoDB, Mongoose
-```
+``` Node.JS, Express JS, MongoDB, Mongoose```
 
 ### AAU
 ``` 
