@@ -24,7 +24,7 @@ http://localhost:3000/meals
 
 
 ### Technologies Used
-``` Node.JS, Express JS, MongoDB, Mongoose```
+``` Node.JS, Express JS, MongoDB, Mongoose, Javascript, CSS, EJS, Google OAuth```
 
 ### AAU
 ``` 
