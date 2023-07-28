@@ -2,6 +2,8 @@
 
 https://git.heroku.com/shielded-basin-42458.git
 
+http://localhost:3000/meals
+
 # Trello Board
 
  https://trello.com/invite/b/QtXF2rqY/ATTIe9d1d9e1a5ea69c4c549d08e4f1024737D783F6C/unit-2-project
