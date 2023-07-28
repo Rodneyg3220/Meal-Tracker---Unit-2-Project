@@ -19,6 +19,8 @@
 -As a user, I want to see the details of my meals for that on another page, because I would like to see a rundown of all details for the meals
 ```
 ### Next Steps/In the future I would like to:
-``` Implentent the ability to place order for items needed from gracery store directly from the app for pickup```
-``` Have the ability to share your meals with friends```
-``` Have The ability to share my meals to social media ```
+``` 
+Implentent the ability to place order for items needed from gracery store directly from the app for pickup.
+Have the ability to share your meals with friends.
+Have The ability to share my meals to social media.
+```
