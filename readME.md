@@ -12,6 +12,15 @@ https://git.heroku.com/shielded-basin-42458.git
 ### How To Use
 ``` The Meal Tracker is used by simply logging in with your gmail account first. Then, you will select the add meals button and enter the name of your meal, the ingredients needed, total calories for the meal, total grams of protein, total grams of sugar, as well as add the date for when you choose to enjoy that specific meal. After a meal is added you are directed to an "All Meals" page that will show your meals and you will click the details button shown to review the specifics of your meal as well as delete the meal once you have enjoyed it.```
 
+![Screen Shot 2023-07-28 at 1 11 51 AM](https://github.com/Rodneyg3220/Meal-Tracker---Unit-2-Project/assets/137218767/c2b27ea6-66c4-4bb8-ae56-5561b36b6e63)
+
+
+![Screen Shot 2023-07-28 at 1 46 43 AM](https://github.com/Rodneyg3220/Meal-Tracker---Unit-2-Project/assets/137218767/747e0b22-16f4-4c80-9fb3-91faa664b9aa)
+
+
+![Meal Tracker - Wireframe](https://github.com/Rodneyg3220/Meal-Tracker---Unit-2-Project/assets/137218767/319c9e49-43c3-4d75-a5c1-d28186dccdd7)
+
+
 ### Technologies Used
 ``` Node.JS, Express JS, MongoDB, Mongoose```
 
