@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-// You'll be creating this controller module next
 const mealsCtrl = require('../controllers/meals');
 const ensureLoggedIn = require('../config/ensureLoggedIn');
 
